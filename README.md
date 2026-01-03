@@ -1,1 +1,1 @@
-<img src="images/FusorTasks_TopDown - System.png" width="1200" />
+<img src="images/FusorTasks_TopDown - System.png" width="1800" />
