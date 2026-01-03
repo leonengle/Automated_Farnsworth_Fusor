@@ -1,0 +1,3 @@
+[submodule "FarnsworthFusor_ControlSystem"]
+	path = FarnsworthFusor_ControlSystem
+	url = https://github.com/leonengle/FarnsworthFusor_ControlSystem.git
