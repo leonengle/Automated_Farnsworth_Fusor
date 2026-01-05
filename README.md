@@ -8,3 +8,6 @@ Our design enables automatic control of the Farnsworth Fusor operating cycle, re
 
 ## System Block Diagram
 <img src="images/FusorTasks_TopDown - System.png" width="1000" />
+
+## Supervisory Controller Logic (Finite State Machine)
+<img src="images/FusorTasks_TopDown - Software.png" width="800" />
