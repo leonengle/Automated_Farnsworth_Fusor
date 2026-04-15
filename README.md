@@ -1,33 +1,13 @@
-# FarnsworthFusor_PowerSystem
+# Automated Farnsworth Fusor
 ## Background
-Here we present a design for a 400W 120VrmsAC 60Hz -> 33kVDC Power Converter—to power an automated Farnsworth Fusor. Relevant Power Converter control I/Os are configured to be digitally accessible by a host computer to enable remote control & monitoring. 
+A Farnsworth Fusor (fusor for short) is a machine that produces the conditions for nuclear fusion using the method of electrostatic confinement. At its simplest, a neutron-producing fusor consists of a wire grid connected to the hot terminal of a power supply (usually -20kVDC 200W output or greater) and a grounded vacuum chamber. The energized wire grid is mounted in the center of the grounded vacuum chamber, creating a strong electric field between the center of the chamber and its walls. The electric field ionizes an injected deuterium gas and accelerates the ions to a degree where collisions have a chance to result in fusion.
 
-The power converter has four stages: a passive rectifier, an inverter (18kHz) driven by complementary PWM, a ferrite UU core 1:30 transformer, and an 8x voltage multiplier. So far, we have achieved 1kVDC output with 8.5VpAC input using the transformer and multiplier stages, while we wait on the inverter-rectifier PCB. There are four PCBs in the design, described below. 
+We are developing a fully digitized 120VAC to -33kVDC power converter (400W) and control system software library compatible with a Farnsworth Fusor. While not a feasible method for power generation, building and operating a Farnsworth Fusor provides students with many opportunities for learning the principles of nuclear fusion and related systems. Our verified designs will be released open source, to provide to universities a feasible pathway to teach students the principles of nuclear fusion in an immersive way. 
 
-Photos of the full assembly in Altium CAD software and current status of build:
+Our design enables automatic control of the Farnsworth Fusor operating cycle, requiring user input only to initiate startup and shutdown procedures. This feature is not supported by currently published Farnsworth Fusor designs and will enable students to practice implementing control algorithms on a fusion-capable testbench. Learning activities in these areas will prepare students for design work on frontier fusion machines around the world.
 
-<img src="images/Assembly_3D.png" width="350" />  <img src="images/Assembly_Real.png" width="250" /> 
+## System Block Diagram
+<img src="images/FusorTasks_TopDown - System.png" width="1000" />
 
-## PCB1: Passive Rectifier & 18kHz Inverter
-### Top-Level Schematic
-<img src="images/PCB1_Schematic_Top.png" width="1000" /> 
-
-### Rectifier & Inverter Schematic
-<img src="images/PCB1_Schematic_RI.png" width="1000" /> 
-
-### Microcontroller Schematic
-<img src="images/PCB1_Schematic_uC.png" width="600" /> 
-
-### 2D & 3D View of PCB
-<img src="images/PCB1_2D.png" width="500" />  <img src="images/PCB1_3D.png" width="350" /> 
-
-## PCB2: 8x Voltage Multiplier, V&I Sense
-### Top-Level Schematic
-<img src="images/PCB2_Schematic.png" width="1000" /> 
-
-### 2D & 3D View of PCB
-<img src="images/PCB2_2D.png" width="500" />  <img src="images/PCB2_3D.png" width="350" /> 
-
-## PCB3: DAQ1 & Fiber-Optic SPI Node
-
-## PCB4: Raspberry Pi 5 <-> Fiber-Optic SPI Node, DAQ2 & UART Node
+## Supervisory Controller Logic (Finite State Machine)
+<img src="images/FusorTasks_TopDown - Software.png" width="800" />
